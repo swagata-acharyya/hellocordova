@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="flash-plugin-hellocordova" version="0.1.0">
+   <name>HelloCordova</name>
+   <js-module name="HelloCordova" src="www/HelloCordova.js">
+      <clobbers target="HelloCordova" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="HelloCordova">
+            <param name="android-package" value="flash.plugin.hellocordova.HelloCordova" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/HelloCordova.java" target-dir="src/flash/plugin/hellocordova/HelloCordova" />
+   </platform>
+</plugin>
